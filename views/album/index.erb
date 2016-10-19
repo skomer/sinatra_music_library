@@ -1,0 +1,9 @@
+<h3>Here are all the albums</h3>
+
+<% @albums.each do |album| %>
+  <b>Name: </b>
+  <p><%= album.name %></p>
+  <b>Artist: </b>
+  <p><%= album.artist_id %></p>
+  <hr>
+<% end %>
