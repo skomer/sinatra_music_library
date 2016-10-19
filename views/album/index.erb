@@ -1,10 +1,10 @@
-<h3>Here are all the albums</h3>
+<h2>Here are all the albums</h2>
 
 <% @albums.each do |album| %>
-  <p><b>Name: </b><%= album.name %></p>
-  <p><b>Artist: </b>
+  <h3><%= album.name %></h3>
+  <p><span class="navyText">by </span> 
     <% artist = Artist.find(album.artist_id) %>
-    <%= artist.name %>
+    <b><%= artist.name %></b>
   </p>
   <hr>
 <% end %>

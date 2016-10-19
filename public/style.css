@@ -8,7 +8,15 @@ h1, h2 {
   color: navy;
 }
 
+a {
+  text-decoration: none;
+}
+
 h3 {
+  color: navy;
+}
+
+.navyText {
   color: navy;
 }
 

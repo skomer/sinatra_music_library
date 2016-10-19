@@ -1,4 +1,4 @@
-<h3>Add album information</h3>
+<h2>Add album information</h2>
 
 <form action="/albums" method="post">
   <p>
@@ -10,7 +10,7 @@
         <option value="<%= artist.id %>"><%= artist.name %></option>
       <% end %>
     </select>
-  </p>
+  ... or, <a href="/artists/new">add a new artist</a></p>
   <p>
     <label for="name">Album name:</label>
     <input type="text" name="name">
