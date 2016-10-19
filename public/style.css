@@ -1,0 +1,21 @@
+body {
+  color: #e91e63;
+  /*background-color: ;*/
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h3 {
+  text-align: center;
+  color: navy;
+}
+
+#main-div, #nav-bar {
+  max-width: 50%;
+  display: block;
+  margin: auto;
+}
+
+#nav-bar img {
+  display: block;
+  margin: auto;
+}

@@ -1,14 +1,10 @@
 <h3>Here are all the albums</h3>
 
 <% @albums.each do |album| %>
-  <b>Name: </b>
-  <p><%= album.name %></p>
-  <b>Artist: </b>
-  <p><%= album.artist_id %></p>
-  <p>
-    <% @artists.each do |artist| %>
-      <%= artist.name if artist.id == album.artist_id %>
-    <% end %>
+  <p><b>Name: </b><%= album.name %></p>
+  <p><b>Artist: </b>
+    <% artist = Artist.find(album.artist_id) %>
+    <%= artist.name %>
   </p>
   <hr>
 <% end %>
