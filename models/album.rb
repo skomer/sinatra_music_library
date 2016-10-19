@@ -32,4 +32,15 @@ class Album
     return result
   end
 
+  def self.find(artist_id)
+    sql = "
+      SELECT *
+      FROM albums
+      WHERE artist_id = #{artist_id}
+    "
+    album_objects = SqlRunner.run(sql)
+    albums = album_objects.map {|album| album["name"]}
+    return albums
+  end
+
 end

@@ -7,7 +7,7 @@ get '/albums' do
 end
 
 get '/albums/new' do
-  # @artists = Artist.all()
+  @artists = Artist.all()
   erb(:'album/new')
 end
 

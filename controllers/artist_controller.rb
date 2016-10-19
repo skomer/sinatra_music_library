@@ -2,6 +2,7 @@ require_relative '../models/artist.rb'
 
 get '/artists' do
   @artists = Artist.all()
+  @albums = Album.all()
   erb(:'artist/index')
 end
 

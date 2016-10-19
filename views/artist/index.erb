@@ -1,6 +1,13 @@
-<h3>Here are all the artists</h3>
+<h2>Here are all the artists</h2>
 
 <% @artists.each do |artist| %>
-  <p><b>Name: </b><%= artist.name %></p>
+  <h3><%= artist.name %></h3>
+    <% albums = Album.find(artist.id) %>
+    <ul>
+      <% albums.each do |album| %>
+        <li><%= album %></li>
+      <% end %>
+    </ul>
+
   <hr>
 <% end %>

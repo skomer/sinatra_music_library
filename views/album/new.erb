@@ -1,15 +1,19 @@
 <h3>Add album information</h3>
 
 <form action="/albums" method="post">
-  <label for="name">Album name:</label>
-  <input type="text" name="name">
-
-  <label for="artist_id">Select the artist:</label>
-  <select name="artist_id">
-    <% @artists.each do |artist| %>
-      <% artist_id = artist.id %>
-      <option value="<%= artist.id %>"><%= artist.name %></option>
-    <% end %>
-  </select>
-  <input type="submit" value="Submit Album">
+  <p>
+    <label for="artist_id">Select the artist:</label>
+    <select name="artist_id">
+      <option label=" "></option>
+      <% @artists.each do |artist| %>
+        <% artist_id = artist.id %>
+        <option value="<%= artist.id %>"><%= artist.name %></option>
+      <% end %>
+    </select>
+  </p>
+  <p>
+    <label for="name">Album name:</label>
+    <input type="text" name="name">
+  </p>
+  <p><input type="submit" value="Submit Album"></p>
 </form>
