@@ -1,5 +1,6 @@
 require( 'pg' )
 require_relative('../db/sql_runner')
+require 'pry-byebug'
 
 class Album
 
@@ -13,6 +14,7 @@ class Album
 
   def save()
     sql = "INSERT INTO albums (name, artist_id) VALUES ('#{ @name }', #{ @artist_id }) RETURNING *"
+    binding.pry
     album = SqlRunner.run( sql ).first
     @id = album['id']
   end

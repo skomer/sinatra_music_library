@@ -5,7 +5,9 @@ get '/albums' do
   erb(:'album/index')
 end
 
-get '/albums/new' do
+get '/albums/new/:id' do
+  @artist_id = params[:id]
+  # binding.pry
   erb(:'album/new')
 end
 
