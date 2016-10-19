@@ -2,12 +2,12 @@ require_relative '../models/album.rb'
 
 get '/albums' do
   @albums = Album.all()
+  @artists = Artist.all()
   erb(:'album/index')
 end
 
-get '/albums/new/:id' do
-  @artist_id = params[:id]
-  # binding.pry
+get '/albums/new' do
+  @artists = Artist.all()
   erb(:'album/new')
 end
 

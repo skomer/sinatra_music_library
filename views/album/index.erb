@@ -5,5 +5,10 @@
   <p><%= album.name %></p>
   <b>Artist: </b>
   <p><%= album.artist_id %></p>
+  <p>
+    <% @artists.each do |artist| %>
+      <%= artist.name if artist.id == album.artist_id %>
+    <% end %>
+  </p>
   <hr>
 <% end %>

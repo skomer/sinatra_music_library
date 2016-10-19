@@ -3,7 +3,13 @@
 <form action="/albums" method="post">
   <label for="name">Album name:</label>
   <input type="text" name="name">
-  <input type="hidden" name="_method" value="artist_id">
 
+  <label for="artist_id">Select the artist:</label>
+  <select name="artist_id">
+    <% @artists.each do |artist| %>
+      <% artist_id = artist.id %>
+      <option value="<%= artist.id %>"><%= artist.name %></option>
+    <% end %>
+  </select>
   <input type="submit" value="Submit Album">
 </form>
